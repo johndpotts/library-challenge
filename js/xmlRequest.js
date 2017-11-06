@@ -6,8 +6,8 @@ const xmlRequest = (() => {
 			let xhr = new XMLHttpRequest();
 			xhr.onload = function () {
 				if (this.readyState === 4 && this.status === 200) {
-console.log(this.responseText);
-          //resolve(dataService.renderJson(this.responseText));
+					//State what to do with response
+					  resolve(dataService.renderJson(this.responseText));
 				} else {
 					reject({
 						status: this.status,
